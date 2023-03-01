@@ -11,6 +11,7 @@ public class NumFall : MonoBehaviour
     void Start()
     {
         movementSpeed = 0;
+        // gravity
         movementAccelerate = 9.8f;
     }
 
@@ -21,6 +22,7 @@ public class NumFall : MonoBehaviour
         transform.position += Vector3.down * movementSpeed * Time.deltaTime;
     }
 
+    // stop
     private void OnTriggerEnter2D(Collider2D other)
     {
         movementAccelerate = 0;
